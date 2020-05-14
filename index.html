@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title>Rock Paper Scissors</title>
-        <link rel="stylesheet" href="styles/main.css">
-        <script src="js/app.js" async defer></script>
-    </head>
-    <body>
-        
-        
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/app.js" async defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Welcome to Jimbo Jongo's RPS GAME</h1>
+                <img src="https://rockpaperscissors.com/wp-content/uploads/2018/03/rps_1@2x.png" alt="rock paper scissors">
+            </div>
+        </nav>
+        <br>
+        <!-- Music player,  -->
+        <button id="extra" onclick="extraReveal()">Music</button>
+        <a href="#">instructions</a>
+        <div id="myDIV">
+            <select id="myMusic" onchange="changeMusic()">
+                <option value="First">As It</option>
+                <option value="Second">Chill</option>
+                <option value="Third">Lil</option>
+                <option value="Fourth">MetroBoomin</option>
+              </select>
+            <audio autoplay loop>
+                <source src="audio/asit.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="wrapper">
+            <div class="gamers">
+                <div id="player">
+                    <img src="images/paper.png" alt="" class="player-img">
+                </div>
+                <div id="vs">
+                    VS
+                </div>
+                <div id="computer">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id="bet-status">
+                <h2>Your current bet rate:</h2>
+            </div>
+            <button id="1x" onclick="betRateOne()">
+            <img src="images/1x-icon.png" alt="" height="100px" width="110px">
+            </button>
+            <button id="2x" onclick="betRateTwo()">
+                <img src="images/2x-b.jpg" alt="" height="100px" width="110px">
+            </button>
+            <button id="3x" onclick="betRateThree()">
+                <img src="images/3x.jpg" alt="" height="100px" width="110px">
+            </button>
+        </div>
+
+        <div>
+            <input type="text" required placeholder="How much are you willing to bet?" id="betmoney">
+            <p>Minimum Bet: </p>
+            <button class="gradient-button-4 gradient-button"> guess and win </button>
+        </div>
+    </div>
+
+    <footer class="clearfix">
+        <p class="copyright">Copyright 2020</p><button>Blessings from Parvis</button>
+        <p class="message">Created with &hearts; by <span class="name">
+            <a href="http://parvis.me" class="name">PARVIZ H</a></span></p>
+    </footer>
+</body>
+
 </html>

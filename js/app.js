@@ -19,6 +19,15 @@ function extraReveal() {
     }
 }
 
+function revealInstruct() {
+    let x = document.getElementById("instructDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 function changeMusic() {
     let x = document.getElementById("myMusic").value;
     if (x === "First") {

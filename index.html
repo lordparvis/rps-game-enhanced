@@ -15,22 +15,33 @@
                 <h1>Welcome to Jimbo Jongo's RPS GAME</h1>
                 <img src="https://rockpaperscissors.com/wp-content/uploads/2018/03/rps_1@2x.png" alt="rock paper scissors">
             </div>
-        </nav>
-        <br>
-        <!-- Music player,  -->
-        <button id="extra" onclick="extraReveal()">Music</button>
-        <a href="#">instructions</a>
-        <div id="myDIV">
-            <select id="myMusic" onchange="changeMusic()">
+            <!-- Music player,  -->
+            <button id="extra" onclick="extraReveal()">Music</button>
+            <div id="myDIV">
+                <select id="myMusic" onchange="changeMusic()">
                 <option value="First">As It</option>
                 <option value="Second">Chill</option>
                 <option value="Third">Lil</option>
                 <option value="Fourth">MetroBoomin</option>
               </select>
-            <audio autoplay loop>
-                <source src="audio/asit.wav" type="audio/wav">
+                <audio autoplay loop>
+                <source src="audio/chill.wav" type="audio/wav">
             </audio>
-        </div>
+            </div>
+            <button id="instr" onclick="revealInstruct()">Instructions</button>
+            <div id="instructDIV">
+                <pre>The following rules are your main instructions:
+                    1. You are playing RPS against an AI, you can change AI if you want.
+                    2. By changing AI, you also changing the background music of AI, and its photo.
+                    2. You can bet money to win or lose, depends on how good you are at guessing.
+                    3. You need to choose your bonus rate, to maximize your win.
+                    4. Good luck!
+                </pre>
+            </div>
+
+        </nav>
+        <br>
+
         <div class="wrapper">
             <div class="gamers">
                 <div id="player">
@@ -40,6 +51,12 @@
                     VS
                 </div>
                 <div id="computer">
+                    <select name="choosecomp" id="chooseAI">
+                <option value="eddy">Beverly Cop</option>
+                <option value="crazyfrog">Crazy Frog</option>
+                <option value="terminator">T800</option>
+                <option value="parvis">Parvis</option>
+              </select>
                 </div>
             </div>
         </div>
@@ -60,7 +77,7 @@
         </div>
 
         <div>
-            <input type="text" required placeholder="How much are you willing to bet?" id="betmoney">
+            <input type="text" required placeholder="How much are you willing to bet?" id="betmoney" maxlength="4">
             <p>Minimum Bet: </p>
             <button class="gradient-button-4 gradient-button"> guess and win </button>
         </div>

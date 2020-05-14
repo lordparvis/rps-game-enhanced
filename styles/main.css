@@ -1,13 +1,16 @@
 div#player {
     height: 200px;
     width: 250px;
-    border: 1px solid red;
 }
 
 div#computer {
     height: 200px;
     width: 250px;
-    border: 1px solid blue;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
 }
 
 
@@ -64,7 +67,6 @@ button.gradient-button-4:hover {
     width: 100%;
     padding: 50px 0;
     text-align: center;
-    background-color: rgb(135, 201, 223);
     margin-top: 20px;
     display: none;
 }
@@ -116,8 +118,14 @@ footer {
 }
 
 div img.player-img {
-    height: 200px;
+    height: 220px;
     background-color: red;
+    width: 100%;
+}
+
+div img.comp-img {
+    height: 220px;
+    width: 100%;
 }
 
 div#vs {
@@ -128,7 +136,7 @@ nav {
     text-align: center;
     color: aquamarine;
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 31%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 10%, rgba(9, 9, 121, 1) 66%, rgba(0, 255, 241, 1) 99%);
 }
 
 input {
@@ -138,4 +146,45 @@ input {
 
 pre {
     font-size: large;
+    text-align: center;
+}
+
+span#yellow {
+    text-align: center;
+    color: orange;
+    border-bottom-color: #F15B31;
+}
+
+img.profile-pic-round {
+    margin-top: 70px;
+}
+
+#comp-profile-pic {
+    float: left;
+}
+
+div#players-avatars {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+div#players-avatars+img {
+    border-radius: 50%;
+}
+
+select#myMusic {
+    align-items: center;
+}
+
+.betwrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+img#logo-margin {
+    margin-bottom: 10px;
 }

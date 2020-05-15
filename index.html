@@ -62,7 +62,7 @@
                     <img src="images/eddy.png" alt="" height="110px" width="100px" class="profile-pic-round comp-prof-pic">
                 </div>
             </div>
-            <button id="restart" class="restart-style">restart game</button>
+            <button id="restart" class="restart-style" onclick="resetGame()">restart game</button>
             <div id="score" class="score">
                 <p>Your score:</p>
                 <p>Computer score:</p>
@@ -89,23 +89,22 @@
                 </div>
             </div>
             <div class="betwrapper">
-                <button id="1bet" onclick="betRateOne()">
-                <img src="images/1x-icon.png" alt="" height="60px" width="50px">
+                <button id="1bet" class="rateButton" onclick="betRateOne()">1x
                 </button>
-                <button id="2bet" onclick="betRateTwo()">
-                    <img src="images/2x-b.jpg" alt="" height="60px" width="50px">
+                <button id="2bet" class="rateButton" onclick="betRateTwo()">2x
                 </button>
-                <button id="3bet" onclick="betRateThree()">
-                    <img src="images/3x.jpg" alt="" height="60px" width="50px">
+                <button id="3bet" class="rateButton" onclick="betRateThree()">
+                    3x
                 </button>
             </div>
 
             <div>
                 AMOUNT:
                 <input type="text" required placeholder="" id="betmoney" maxlength="4"><br>
+                <div>Starting Balance is: $400</div>
                 <button id="wallet" onclick="showBalance()">Show my current balance:</button>
                 <div id="balance">Balance:</div>
-                <p class="current-rate">Your current bet rate:</p>
+                <div class="current-rate">Your current bet rate:</div>
                 <button class="gradient-button-4 gradient-button generate" onclick=""> accept bet </button>
             </div>
         </div>

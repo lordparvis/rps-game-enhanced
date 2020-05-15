@@ -10,11 +10,21 @@ function play(e) {
     const compHand = giveCompHand();
     const ourWinner = theWinner(myHand, compHand);
     Swal.fire('computer chose ' + compHand, ourWinner, 'success');
-    /* if (walletBalance <= 300) {
+    checkLimits(walletBalance);
+}
+
+function checkLimits(myWallet) {
+    if (myWallet <= 200) {
         Swal.fire(`Balance is less than $300. Dont be broke`);
-    } else if (walletBalance > 500) {
-        Swal.fire(`Balance is more than ${walletBalance}`);
-    }*/
+        play(e);
+    } else if (myWallet > 500) {
+        Swal.fire(`Balance is more than ${walletBalance}. I wonder if you wife knows about that`);
+        play(e);
+    }
+}
+
+function resetGame() {
+    walletBalance = 400;
 }
 
 function theWinner(my, comp) {
@@ -70,7 +80,7 @@ choices.forEach(choice => choice.addEventListener('click', play));
 
 let currentRate;
 const minimumBet = 100;
-let walletBalance = 300;
+let walletBalance = 400;
 
 function extraReveal() {
     let x = document.getElementById("myDIV");

@@ -10,11 +10,11 @@ function play(e) {
     const compHand = giveCompHand();
     const ourWinner = theWinner(myHand, compHand);
     Swal.fire('computer chose ' + compHand, ourWinner, 'success');
-    if (walletBalance <= 300) {
+    /* if (walletBalance <= 300) {
         Swal.fire(`Balance is less than $300. Dont be broke`);
     } else if (walletBalance > 500) {
         Swal.fire(`Balance is more than ${walletBalance}`);
-    }
+    }*/
 }
 
 function theWinner(my, comp) {

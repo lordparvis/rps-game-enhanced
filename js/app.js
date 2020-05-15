@@ -17,23 +17,34 @@ function theWinner(my, comp) {
         return 'draw';
     } else if (my === 'rock') {
         if (comp === 'paper') {
-            return 'Computer wins';
+            walletBalance -= 10;
+            return `Computer wins and takes $10. Balance:${walletBalance}`;
         } else {
-            return 'You win';
+            walletBalance += 10;
+            return `You win + $10 Balance:${walletBalance}`;
         }
     } else if (my === 'paper') {
         if (comp === 'scissors') {
-            return 'Computer wins';
+            walletBalance -= 10;
+            return `Computer wins and takes $10. Balance:${walletBalance}`;
         } else {
-            return 'You win';
+            walletBalance += 10;
+            return `You win + $10 Balance:${walletBalance}`;
         }
     } else if (my === 'scissors') {
         if (comp === 'rock') {
-            return 'Computer win';
+            walletBalance -= 10;
+            return `Computer wins and takes $10. Balance:${walletBalance}`;
         } else {
-            return 'You win';
+            walletBalance += 10;
+            return `You win + $10 Balance:${walletBalance}`;
         }
     }
+}
+if (walletBalance <= 100) {
+    Swal.fire(`Balance is less than ${walletBalance}`);
+} else if (walletBalance > 1500) {
+    Swal.fire(`Balance is more than ${walletBalance}`);
 }
 
 function giveCompHand() {
@@ -50,6 +61,7 @@ choices.forEach(choice => choice.addEventListener('click', play));
 
 let currentRate;
 const minimumBet = 100;
+let walletBalance = 1000;
 
 function extraReveal() {
     let x = document.getElementById("myDIV");

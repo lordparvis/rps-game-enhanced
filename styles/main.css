@@ -138,9 +138,10 @@ nav {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 10%, rgba(9, 9, 121, 1) 66%, rgba(0, 255, 241, 1) 99%);
 }
 
-input {
+input#betmoney {
     height: 40px;
     width: 70px;
+    margin-bottom: 20px;
 }
 
 pre {
@@ -223,4 +224,18 @@ button#restart {
 
 .score p:last-child {
     background-color: green;
+}
+
+button#blessings {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 5px;
+}
+
+button#wallet {
+    margin-bottom: 20px;
 }

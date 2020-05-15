@@ -1,11 +1,15 @@
 div#player {
-    height: 200px;
+    height: 218px;
     width: 250px;
+    background-color: red;
+    cursor: pointer;
 }
 
 div#computer {
-    height: 200px;
+    height: 218px;
     width: 250px;
+    border: 1px solid blue;
+    background-color: blue;
 }
 
 .wrapper {
@@ -13,19 +17,12 @@ div#computer {
     margin: 0 auto;
 }
 
-
-/*
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to right, #fffdc2, #fffdc2 15%, #d7f0a2 15%, #d7f0a2 85%, #fffdc2 85%);
-}
-*/
-
 #computer {
     float: right;
 }
+
+
+/* copied from internet button style starts*/
 
 button.gradient-button-4 {
     background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
@@ -57,8 +54,10 @@ button.gradient-button-4:hover {
 
 .gradient-button:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    margin: 8px 10px 12px;
 }
+
+
+/* copied from internet button style ends*/
 
 
 /* Extra Functions Bar */
@@ -118,13 +117,13 @@ footer {
 }
 
 div img.player-img {
-    height: 220px;
+    height: 200px;
     background-color: red;
     width: 100%;
 }
 
 div img.comp-img {
-    height: 220px;
+    height: 200px;
     width: 100%;
 }
 
@@ -157,6 +156,7 @@ span#yellow {
 
 img.profile-pic-round {
     margin-top: 70px;
+    border-radius: 50%;
 }
 
 #comp-profile-pic {
@@ -170,21 +170,57 @@ div#players-avatars {
     margin-bottom: 30px;
 }
 
-div#players-avatars+img {
-    border-radius: 50%;
-}
-
 select#myMusic {
     align-items: center;
 }
 
-.betwrapper {
+div.betwrapper {
     margin-top: 70px;
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
+    justify-content: space-around;
 }
 
 img#logo-margin {
     margin-bottom: 10px;
+}
+
+strong {
+    margin-left: 30px;
+}
+
+p.current-rate {
+    margin-left: 40px;
+}
+
+button.generate {
+    margin-left: 50px;
+}
+
+.player-choices {
+    align-items: center;
+}
+
+button#restart {
+    height: 20px;
+    width: 100px;
+    margin: -20px -50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2rem;
+}
+
+.score p:first-child {
+    background-color: #3a7bd5;
+}
+
+.score p:last-child {
+    background-color: green;
 }

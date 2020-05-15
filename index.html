@@ -1,3 +1,14 @@
+<!-- Rock Paper Scissors Hands 
+    Sertion / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)
+  
+    https://commons.wikimedia.org/wiki/File:Rock-paper-scissors_(scissors).png
+
+    https://commons.wikimedia.org/wiki/File:Rock-paper-scissors_(paper).png
+
+    https://commons.wikimedia.org/wiki/File:Rock-paper-scissors_(rock).png
+
+    Royalty free AUDIO by Parviz Haydark.
+-->
 <!DOCTYPE html>
 
 <head>
@@ -6,6 +17,9 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="js/app.js" async defer></script>
+
+    <!-- simple message box, this project by SA source: https://github.com/sweetalert2/sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
@@ -18,8 +32,7 @@
             <!-- Music player,  -->
             <button id="extra" onclick="extraReveal()">Music</button>
             <div id="myDIV">
-
-                <audio autoplay controls loop>
+                <audio loop controls>
                 <source src="audio/chill.wav" type="audio/wav">
             </audio>
             </div>
@@ -43,22 +56,25 @@
         <br>
 
         <div class="wrapper">
+            <!-- avatars-->
             <div id="players-avatars">
                 <div id="player-profile-pic"><img src="images/profile-pic-player.png" alt="" height="110px" width="100px" class="profile-pic-round"> </div>
 
                 <div id="comp-profile-pic">
-                    <img src="images/eddy.png" alt="" height="110px" width="100px" class="profile-pic-round">
+                    <img src="images/eddy.png" alt="" height="110px" width="100px" class="profile-pic-round comp-prof-pic">
                 </div>
             </div>
-
+            <button id="restart" class="restart-style">restart game</button>
+            <div id="score" class="score">
+                <p>Your score:</p>
+                <p>Computer score:</p>
+            </div>
+            <!-- gamers -->
             <div class="gamers">
                 <div id="player">
-                    <img src="images/paper.png" alt="" class="player-img">
-                    <select name="user-hand" id="player-hand">
-<option value="rockHand">Rock</option>
-<option value="paperHand">Paper</option>
-<option value="ScissorsHand">Scissors</option>
-                    </select>
+                    <img id="rock" src="images/rock.png" alt="" class="player-choice" height="100px" width="100px">
+                    <img id="paper" src="images/paper.png" class="player-choice" height="100px" width="100px" alt="">
+                    <img id="scissors" src="images/scissors.png" class="player-choice" height="100px" width="100px" alt="">
                 </div>
                 <div id="vs">
                     VS
@@ -68,20 +84,20 @@
                         <option value="First">Beverly Cop</option>
                         <option value="Second">T800</option>
                         <option value="Third">Axel Frog</option>
-                        <option value="Fourth">Parvis</option>
-                        <option value="Fifth">Gordon Freeman</option>
+                        <option value="Fourth">GMAN</option>
+                        
                       </select>
                     <img src="images/giphy.gif" alt="" class="comp-img" height="110px" width="100px">
                 </div>
             </div>
             <div class="betwrapper">
-                <button id="1x" onclick="betRateOne()">
+                <button id="1bet" onclick="betRateOne()">
                 <img src="images/1x-icon.png" alt="" height="100px" width="110px">
                 </button>
-                <button id="2x" onclick="betRateTwo()">
+                <button id="2bet" onclick="betRateTwo()">
                     <img src="images/2x-b.jpg" alt="" height="100px" width="110px">
                 </button>
-                <button id="3x" onclick="betRateThree()">
+                <button id="3bet" onclick="betRateThree()">
                     <img src="images/3x.jpg" alt="" height="100px" width="110px">
                 </button>
             </div>
@@ -89,15 +105,16 @@
             <div>
                 AMOUNT:
                 <input type="text" required placeholder="" id="betmoney" maxlength="4">
-                <p>Minimum Bet: </p>
-                <button class="gradient-button-4 gradient-button"> guess and win </button>
+                <div id="balance">Balance: $1000</div>
+                <p class="current-rate">Your current bet rate:</p>
+                <button class="gradient-button-4 gradient-button generate" onclick=""> accept bet </button>
             </div>
         </div>
 
     </div>
 
     <footer class="clearfix">
-        <p class="copyright">Copyright 2020</p><button>Blessings from Parvis</button>
+        <p class="copyright">Copyright 2020</p><button>Blessings</button>
         <p class="message">Created with &hearts; by <span class="name">
             <a href="http://parvis.me" class="name">PARVIZ H</a></span></p>
     </footer>
